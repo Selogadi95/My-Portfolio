@@ -1,6 +1,6 @@
 # 💼 Personal Portfolio Website
 
-🔗 **Live Site:** https://classy-caramel-d54194.netlify.app/
+🔗 **Live Site:** [https://classy-caramel-d54194.netlify.app/](https://keen-naiad-eb3c24.netlify.app/)
 
 This is my personal portfolio website showcasing my profile, skills, and contact information as an aspiring **Software Developer & Software Tester**.
 
