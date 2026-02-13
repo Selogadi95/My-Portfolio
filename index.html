@@ -1,575 +1,711 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Happy | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <script src="script.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happy Tjiane | Portfolio</title>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Chart.js for 3D Charts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-3d@latest"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="Portfolio of Happy Tjiane - Software Development Graduate and Software Tester">
+
+  <meta property="og:title" content="Happy Tjiane | Portfolio">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="Happy Tjiane Portfolio">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#F5E9DE">
 </head>
+
 <body>
 
-  <!-- Navigation Bar -->
-  <div class="nav-bar">
-    <div class="nav-header">
-      <div class="logo">HMT profile.</div>
-      <button class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+<!-- Top section with logo and theme toggle -->
+<!-- Top section with logo and theme toggle -->
+<header class="header-section">
+  <div class="logo-icon-only">
+    &lt;HT/&gt;
+  </div>
+
+
+
+  <!-- Theme toggle moved next to logo -->
+  <div class="theme-toggle-container">
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+      <i class="fas fa-sun"></i>
+      <i class="fas fa-moon"></i>
+    </button>
+  </div>
+
+  <!-- Hamburger Menu Button (Mobile Only) -->
+  <button class="hamburger-menu" id="hamburgerMenu" aria-label="Toggle navigation menu">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
+</header>
+
+<!-- Floating Navigation -->
+<nav class="floating-nav" id="mainNav">
+  <a href="#about"><i class="fas fa-user"></i> About</a>
+  <a href="#work"><i class="fas fa-briefcase"></i> My Work</a>
+  <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+  <a href="#hire" class="hire-me" id="hireMeBtn">
+    <i class="fas fa-handshake"></i> Hire Me
+  </a>
+</nav>
+
+<!-- Hire Me Modal -->
+<div class="modal-overlay" id="hireModal">
+  <div class="modal-container">
+    <div class="modal-header">
+      <div class="modal-icon">
+        <i class="fas fa-handshake"></i>
+      </div>
+      <h2 class="modal-title">Let's Work Together</h2>
+      <button class="modal-close" id="closeModal">
+        <i class="fas fa-times"></i>
       </button>
     </div>
 
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About Me</a></li>
-      <li><a href="#projects">My Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <div class="modal-content">
+      <p class="modal-text">
+        I'm currently seeking <strong>entry-level positions, internships, and junior roles</strong>
+        to kick-start and grow my career in software development and quality assurance.
+      </p>
+
+      <div class="modal-highlights">
+        <div class="highlight-item">
+          <i class="fas fa-rocket"></i>
+          <span>Ready to contribute and learn</span>
+        </div>
+        <div class="highlight-item">
+          <i class="fas fa-users"></i>
+          <span>Eager to join collaborative teams</span>
+        </div>
+        <div class="highlight-item">
+          <i class="fas fa-chart-line"></i>
+          <span>Committed to professional growth</span>
+        </div>
+      </div>
+
+      <div class="modal-buttons">
+        <a href="path/to/your-cv.pdf" class="modal-btn btn-cv" download="Happy_Tjiane_CV.pdf">
+          <i class="fas fa-download"></i> View CV
+        </a>
+        <a href="#contact" class="modal-btn btn-contact">
+          <i class="fas fa-paper-plane"></i> Contact Me
+        </a>
+      </div>
+    </div>
   </div>
+</div>
 
+<!-- Main content -->
+<main class="container">
 
-  <!-- Main Content Container -->
-  <div class="container">
-    
-    
-    <!-- Hero Section (Home Page) -->
-    <section id="home" class="hero-section">
-      <div class="hero-container">
-        <div class="hero">
-          <div class="hero-text">
-            <h1>Hey there, I'm Happy Tjiane</h1>
-            <p class="subheading">
-              Aspiring Software Developer and software Tester | Software Development diploma graduate
-            </p>
-             <p class="subheading">
-              <i class="fas fa-location"></i> Gauteng, South Africa 
-            </p>
-            <div class="hero-buttons">
-              <a href="#contact" class="btn btn-primary">
-                <i class="fas fa-phone"></i> let's connect
-              </a>
-              <a href="#projects" class="btn btn-outline">
-               <i class="fas fa-briefcase"></i> View my work
+  <!-- Hero section -->
+  <section class="hero-section">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="text-section">
+          <div class="title-wrapper">
+            <div class="greeting-container">
+              <div class="greeting-line"></div>
+              <h2 class="greeting">Hello, I'm</h2>
+              <div class="greeting-line"></div>
+            </div>
 
-              </a>
+            <h1 class="main-title">
+              <span class="title-name">Happy <span class="name-highlight">Tjiane</span></span>
+            </h1>
+          </div>
+
+          <div class="subtitle-container">
+            <div class="subtitle-item">
+              <i class="fas fa-graduation-cap subtitle-icon"></i>
+              <span>Software Development Graduate</span>
+            </div>
+            <div class="separator-dot"></div>
+            <div class="subtitle-item">
+              <i class="fas fa-search subtitle-icon"></i>
+              <span>Aspiring Software Tester</span>
+            </div>
+            <div class="separator-dot"></div>
+            <div class="subtitle-item">
+              <i class="fas fa-map-marker-alt subtitle-icon"></i>
+              <span>Roodepoort, JHB, South Africa</span>
             </div>
           </div>
-          <div class="hero-image">
-            <img src="HappyProfile.jpg" alt="Happy Tjiane">
+
+          <p class="description">
+            Passionate about creating digital solutions that are both functional and elegant.
+            I bridge the gap between development and quality assurance to deliver exceptional software experiences.
+          </p>
+
+          <div class="cta-buttons">
+            <a href="path/to/your-cv.pdf" class="btn btn-primary" download="Happy_Tjiane_CV.pdf">
+              <i class="fas fa-download"></i> Download CV
+            </a>
+            <a href="#work" class="btn btn-outline">
+              <i class="fas fa-eye"></i> View Portfolio
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <i class="fas fa-paper-plane"></i> Contact Me
+            </a>
+          </div>
+        </div>
+
+        <div class="image-section">
+          <div class="profile-image-container">
+            <div class="profile-frame">
+              <img src="img/HappyProfile.jpg" alt="Happy Tjiane" class="profile-image">
+              <div class="image-decoration">
+                <div class="decoration-circle circle-1"></div>
+                <div class="decoration-circle circle-2"></div>
+                <div class="decoration-circle circle-3"></div>
+              </div>
+            </div>
+            <div class="image-caption">
+              <i class="fas fa-quote-left quote-icon"></i>
+              <span>Crafting code with purpose</span>
+              <i class="fas fa-quote-right quote-icon"></i>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- About Me Section (Separate Page) -->
-    <section id="about" class="about-section">
-      <div class="about-container">
-        <h1 class="about-title">About Me</h1>
-        
-        <div class="about-content">
-          <p>
-            A <strong class="highlight">A recent graduate in Information Technology, majored in Software development</strong> at
-            <strong class="highlight">Tshwane University of Technology</strong>, I thrive at the intersection of
-            <strong class="highlight">mobile</strong> and <strong class="highlight">web development</strong>.
-            My code is powered by <strong class="highlight">Java/Kotlin</strong> for Android,
-            <strong class="highlight">React.js</strong> for interactive UIs, and <strong class="highlight">SQL</strong>
-            for structured data magic. Currently obsessed with <strong class="highlight">clean architecture</strong>
-            and <strong class="highlight">scalable systems</strong>, I approach every project with
-            <strong class="highlight">performance</strong> and <strong class="highlight">user experience</strong>
-            as non-negotiable pillars.
+  <!-- About Me Section -->
+  <section id="about" class="about-section">
+    <div class="about-container">
+      <div class="section-header">
+        <h2 class="section-title">About <span class="title-accent">Me</span></h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="about-text">
+        <p class="about-description">
+          I'm a passionate software development graduate from
+          <span class="keyword">Tshwane University of Technology</span>,
+          holding a Diploma in Information Technology
+          (<span class="keyword">Software Development</span>).
+          My journey in tech has equipped me with a strong foundation in both
+          <span class="keyword">development</span> and
+          <span class="keyword">quality assurance</span>.
+        </p>
+
+        <p class="about-description">
+          With hands-on experience in various
+          <span class="keyword">programming paradigms</span> and
+          <span class="keyword">software development methodologies</span>,
+          I've developed a keen eye for detail and a commitment to writing
+          <span class="keyword">clean, efficient code</span>.
+          I believe in creating software that not only functions flawlessly
+          but also delivers
+          <span class="keyword">exceptional user experiences</span>.
+        </p>
+
+      </div>
+
+      <!-- Floating Icons - No border, centered -->
+      <div class="about-icons">
+        <div class="icon-item">
+          <i class="fas fa-university"></i>
+          <span class="icon-label">TUT Graduate</span>
+        </div>
+
+        <div class="icon-item">
+          <i class="fas fa-laptop-code"></i>
+          <span class="icon-label">Developer</span>
+        </div>
+
+        <div class="icon-item">
+          <i class="fas fa-bug"></i>
+          <span class="icon-label">Tester</span>
+        </div>
+
+        <div class="icon-item">
+          <i class="fas fa-tools"></i>
+          <span class="icon-label">IT Skills</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Qualifications Section -->
+  <section id="qualifications" class="qualifications-section">
+    <div class="section-header">
+      <h2 class="section-title">Certifications & <span class="title-accent">Qualifications</span></h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="timeline-container">
+      <!-- Timeline Item 1 -->
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <h3 class="qualification-title">Diploma in Information Technology</h3>
+            <span class="qualification-year">2019 - 2025</span>
+          </div>
+          <div class="qualification-subtitle">
+            <i class="fas fa-university"></i>
+            <span>Tshwane University of Technology</span>
+          </div>
+          <p class="qualification-desc cursive">
+            Specialized in Software Development, gaining comprehensive knowledge in programming,
+            database management, and software engineering principles.
           </p>
         </div>
-        <!-- Icon Container -->
-        <div class="about-icons">
-          <div class="icon-item">
-            <i class="fas fa-university"></i>
-            <span class="icon-label">TUT Comp<br>Science</span>
-          </div>
-          <div class="icon-item">
-            <i class="fas fa-laptop-code"></i>
-            <span class="icon-label">Mobile & Web<br>Development</span>
-          </div>
-          <div class="icon-item">
-            <i class="fas fa-book-open"></i>
-            <span class="icon-label">Continuous<br>Learning</span>
-          </div>
-        </div>
-
-        
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section">
-      <h1 class="section-title">I've worked with</h1>
-      
-      <div class="skills-grid">
-        <!-- Programming Languages -->
-        <div class="skill-card">
-          <i class="fab fa-html5"></i>
-          <span>HTML5</span>
-        </div>
-        <div class="skill-card">
-          <i class="fab fa-css3-alt"></i>
-          <span>CSS3</span>
-        </div>
-        <div class="skill-card">
-          <i class="fab fa-js"></i>
-          <span>JavaScript</span>
-        </div>
-        <div class="skill-card">
-          <i class="fab fa-java"></i>
-          <span>Java</span>
-        </div>
-        <div class="skill-card">
-          <i class="fas fa-database"></i>
-          <span>SQL</span>
-        </div>
-        
-        <!-- Frameworks & Libraries -->
-        <div class="skill-card">
-          <i class="fab fa-react"></i>
-          <span>React</span>
-        </div>
-        <div class="skill-card">
-          <i class="fas fa-leaf"></i>
-          <span>Spring Boot</span>
-        </div>
-        <div class="skill-card">
-          <i class="fab fa-node-js"></i>
-          <span>Node.js</span>
-        </div>
-        <div class="skill-card">
-          <i class="fab fa-java J2EE"></i>
-          <span>J2EE</span>
-        </div>
-        
-        <!-- Tools & Platforms -->
-        <div class="skill-card">
-          <i class="fab fa-github"></i>
-          <span>GitHub</span>
-        </div>
-        
-        <div class="skill-card">
-          <i class="fas fa-fire"></i>
-          <span>Firebase</span>
-        </div>
-        <div class="skill-card">
-          <i class="fab fa-docker"></i>
-          <span>Docker</span>
-        </div>
-        
-        <!-- Databases -->
-        <div class="skill-card">
-          <i class="fas fa-database"></i>
-          <span>MySQL</span>
-        </div>
-        <div class="skill-card">
-          <i class="fas fa-database"></i>
-          <span>PostgreSQL</span>
+        <div class="timeline-dot">
+          <i class="fas fa-graduation-cap"></i>
         </div>
       </div>
-    </section>
 
-  
-
-    <!-- Hire Me Section -->
-          <section id="hire-me" class="hire-section">
-        <div class="hire-container">
-          <h1 class="section-title">Work With Me</h1>
-        
-          <div class="value-cards">
-            <!-- Card 1 -->
-            <div class="value-card">
-              <h3 class="card-title"> Currently Seeking</h3>
-              <ul class="card-list">
-                <li>WIL / Internship Placement</li>
-                <li>Remote / Hybrid roles</li>
-                <li>Growth-oriented teams</li>
-              </ul>
-            </div>
-        
-            <!-- Card 2 -->
-            <div class="value-card">
-              <h3 class="card-title">i Offer</h3>
-              <ul class="card-list">
-                <li>Full-stack web development</li>
-                <li>Quick adaptability</li>
-                <li>Clean, maintainable code</li>
-              </ul>
-            </div>
-        
-            <!-- Card 3 -->
-            <div class="value-card">
-              <h3 class="card-title">My Value</h3>
-              <ul class="card-list">
-                <li>Team player & communicator</li>
-                <li>Attention to detail</li>
-                <li>Driven to grow & learn</li>
-              </ul>
-            </div>
+      <!-- Timeline Item 2 -->
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <h3 class="qualification-title">Software Testing Fundamentals</h3>
+            <span class="qualification-year">2025</span>
           </div>
-        
-          <div class="hire-action-buttons">
-            <a href="#contact" class="hire-btn hire-btn-primary">
-              <i class="fas fa-paper-plane"></i> Hire Me
+          <div class="qualification-subtitle">
+            <i class="fas fa-certificate"></i>
+            <span>Online Certification</span>
+          </div>
+          <p class="qualification-desc cursive">
+            Completed comprehensive training in software testing methodologies,
+            quality assurance processes, and test automation basics.
+          </p>
+        </div>
+        <div class="timeline-dot">
+          <i class="fas fa-search"></i>
+        </div>
+      </div>
+
+      <!-- Timeline Item 3 -->
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <h3 class="qualification-title">Web Development Bootcamp</h3>
+            <span class="qualification-year">2023</span>
+          </div>
+          <div class="qualification-subtitle">
+            <i class="fas fa-code"></i>
+            <span>Intensive Training Program</span>
+          </div>
+          <p class="qualification-desc cursive">
+            Hands-on training in modern web technologies including HTML5, CSS3, JavaScript,
+            and responsive design principles.
+          </p>
+        </div>
+        <div class="timeline-dot">
+          <i class="fas fa-laptop-code"></i>
+        </div>
+      </div>
+
+      <!-- Timeline Item 4 -->
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <h3 class="qualification-title">Database Management Certification</h3>
+            <span class="qualification-year">2023</span>
+          </div>
+          <div class="qualification-subtitle">
+            <i class="fas fa-database"></i>
+            <span>SQL & NoSQL Databases</span>
+          </div>
+          <p class="qualification-desc cursive">
+            Mastered database design, SQL queries, and data modeling with practical
+            experience in both relational and non-relational database systems.
+          </p>
+        </div>
+        <div class="timeline-dot">
+          <i class="fas fa-database"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="work" class="projects-section">
+    <div class="section-header">
+      <h2 class="section-title">My <span class="title-accent">Projects</span></h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">Showcasing practical software development work</p>
+    </div>
+
+    <div class="projects-grid">
+      <!-- Project 1 -->
+      <div class="project-card">
+        <div class="project-icon">
+          <i class="fas fa-book"></i>
+        </div>
+
+        <h3 class="project-title">Library Management System</h3>
+
+        <p class="project-desc">
+          Three-tier architecture application with C++ backend, MySQL database, and comprehensive library management features including user authentication, book tracking, and automated reporting.
+        </p>
+
+        <div class="tech-stack">
+          <span class="tech-tag">C++</span>
+          <span class="tech-tag">MySQL</span>
+          <span class="tech-tag">Three-Tier Architecture</span>
+          <span class="tech-tag">File I/O</span>
+          <span class="tech-tag">Object-Oriented</span>
+        </div>
+
+        <div class="project-links">
+          <a href="#" class="link-github">
+            <i class="fab fa-github"></i>
+            <span>View Code</span>
+          </a>
+          <a href="#" class="link-demo">
+            <i class="fas fa-external-link-alt"></i>
+            <span>Live Demo</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <div class="project-icon">
+          <i class="fas fa-shopping-cart"></i>
+        </div>
+
+        <h3 class="project-title">E-Commerce Platform</h3>
+
+        <p class="project-desc">
+          Responsive web store with product catalog, shopping cart, and mobile-first design. Features user authentication, product search, and secure checkout process using modern web technologies.
+        </p>
+
+        <div class="tech-stack">
+          <span class="tech-tag">JavaScript</span>
+          <span class="tech-tag">HTML5</span>
+          <span class="tech-tag">CSS3</span>
+          <span class="tech-tag">REST API</span>
+          <span class="tech-tag">Responsive Design</span>
+        </div>
+
+        <div class="project-links">
+          <a href="#" class="link-github">
+            <i class="fab fa-github"></i>
+            <span>View Code</span>
+          </a>
+          <a href="#" class="link-demo disabled">
+            <i class="fas fa-clock"></i>
+            <span>Demo </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <div class="project-icon">
+          <i class="fas fa-tasks"></i>
+        </div>
+
+        <h3 class="project-title">Task Management Dashboard</h3>
+
+        <p class="project-desc">
+          Collaborative productivity tool with real-time updates, team collaboration features, progress tracking, and analytics dashboard. Supports multiple users and project management workflows.
+        </p>
+
+        <div class="tech-stack">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">PostgreSQL</span>
+          <span class="tech-tag">Real-time Updates</span>
+          <span class="tech-tag">Team Collaboration</span>
+          <span class="tech-tag">Analytics</span>
+        </div>
+
+        <div class="project-links">
+          <a href="#" class="link-github">
+            <i class="fab fa-github"></i>
+            <span>View Code</span>
+          </a>
+          <a href="#" class="link-demo">
+            <i class="fas fa-external-link-alt"></i>
+            <span>Live Demo</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills & Tech Stack Section -->
+  <!-- Skills & Tech Stack Section -->
+  <section id="skills" class="skills-section">
+    <div class="section-header">
+      <h2 class="section-title">Tech <span class="title-accent">Stack</span> & Skills</h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">Technologies I've mastered through my diploma and testing journey</p>
+    </div>
+
+    <!-- Floating Tech Stack Categories -->
+    <div class="skills-categories">
+      <!-- Programming Languages -->
+      <div class="category-area">
+        <div class="category-header">
+          <i class="fas fa-code"></i>
+          <h3 class="category-title">Programming</h3>
+        </div>
+        <div class="star-cluster">
+          <div class="star-item" style="--x: 20%; --y: 15%;">
+            <i class="fab fa-cuttlefish"></i>
+            <span class="star-label">C++</span>
+          </div>
+          <div class="star-item" style="--x: 70%; --y: 25%;">
+            <i class="fab fa-java"></i>
+            <span class="star-label">Java</span>
+          </div>
+          <div class="star-item" style="--x: 40%; --y: 60%;">
+            <i class="fab fa-python"></i>
+            <span class="star-label">Python</span>
+          </div>
+          <div class="star-item" style="--x: 80%; --y: 65%;">
+            <i class="fab fa-js"></i>
+            <span class="star-label">JS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Web & Frontend -->
+      <div class="category-area">
+        <div class="category-header">
+          <i class="fas fa-globe"></i>
+          <h3 class="category-title">Web Dev</h3>
+        </div>
+        <div class="star-cluster">
+          <div class="star-item" style="--x: 25%; --y: 30%;">
+            <i class="fab fa-html5"></i>
+            <span class="star-label">HTML5</span>
+          </div>
+          <div class="star-item" style="--x: 65%; --y: 20%;">
+            <i class="fab fa-css3-alt"></i>
+            <span class="star-label">CSS3</span>
+          </div>
+          <div class="star-item" style="--x: 15%; --y: 65%;">
+            <i class="fab fa-react"></i>
+            <span class="star-label">React</span>
+          </div>
+          <div class="star-item" style="--x: 75%; --y: 70%;">
+            <i class="fas fa-server"></i>
+            <span class="star-label">API</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Databases -->
+      <div class="category-area">
+        <div class="category-header">
+          <i class="fas fa-database"></i>
+          <h3 class="category-title">Databases</h3>
+        </div>
+        <div class="star-cluster">
+          <div class="star-item" style="--x: 20%; --y: 20%;">
+            <i class="fas fa-database"></i>
+            <span class="star-label">MySQL</span>
+          </div>
+          <div class="star-item" style="--x: 65%; --y: 30%;">
+            <i class="fas fa-database"></i>
+            <span class="star-label">PostgreSQL</span>
+          </div>
+          <div class="star-item" style="--x: 35%; --y: 65%;">
+            <i class="fas fa-database"></i>
+            <span class="star-label">MongoDB</span>
+          </div>
+          <div class="star-item" style="--x: 80%; --y: 60%;">
+            <i class="fas fa-table"></i>
+            <span class="star-label">SQL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools & Testing -->
+      <div class="category-area">
+        <div class="category-header">
+          <i class="fas fa-tools"></i>
+          <h3 class="category-title">Tools & Testing</h3>
+        </div>
+        <div class="star-cluster">
+          <div class="star-item" style="--x: 25%; --y: 25%;">
+            <i class="fab fa-git-alt"></i>
+            <span class="star-label">Git</span>
+          </div>
+          <div class="star-item" style="--x: 70%; --y: 20%;">
+            <i class="fas fa-vial"></i>
+            <span class="star-label">Selenium</span>
+          </div>
+          <div class="star-item" style="--x: 20%; --y: 65%;">
+            <i class="fas fa-check-double"></i>
+            <span class="star-label">JUnit</span>
+          </div>
+          <div class="star-item" style="--x: 75%; --y: 70%;">
+            <i class="fas fa-terminal"></i>
+            <span class="star-label">Terminal</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Charts Directly on Background -->
+    <div class="charts-on-background">
+      <!-- Experience Distribution Chart -->
+      <div class="chart-section">
+        <div class="chart-title-area">
+          <h3 class="chart-main-title">Experience Distribution</h3>
+          <p class="chart-desc">Where I've invested my learning time</p>
+        </div>
+        <canvas id="pieChart3D" class="chart-canvas-bg"></canvas>
+      </div>
+
+      <!-- Skill Proficiency Chart -->
+      <div class="chart-section">
+        <div class="chart-title-area">
+          <h3 class="chart-main-title">Skill Proficiency</h3>
+          <p class="chart-desc">Theory vs Practical Application</p>
+        </div>
+        <canvas id="barChart3D" class="chart-canvas-bg"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="section-header">
+      <h2 class="section-title">Get In <span class="title-accent">Touch</span></h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">Feel free to reach out for collaborations or just to say hello!</p>
+    </div>
+
+    <div class="contact-container">
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-details">
+            <h4 class="contact-title">Email</h4>
+            <p class="contact-text">happy95.tjiane@gmail.com</p>
+            <a href="mailto:happy95.tjiane@gmail.com" class="contact-link">Send an email</a>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-details">
+            <h4 class="contact-title">Location</h4>
+            <p class="contact-text">Johannesburg, South Africa</p>
+            <span class="contact-link">Open to remote work</span>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-details">
+            <h4 class="contact-title">Phone</h4>
+            <p class="contact-text">+27725569229</p>
+            <a href="tel:+27123456789" class="contact-link">Call me</a>
+          </div>
+        </div>
+
+        <!-- Social Media -->
+        <div class="social-media">
+          <h4 class="social-title">Connect with me</h4>
+          <div class="social-icons-container">
+            <a href="#" class="social-link">
+              <i class="fab fa-linkedin"></i>
             </a>
-            <a href="HAPPY.pdf" class="hire-btn hire-btn-secondary">
-              <i class="fas fa-download"></i> Download Resume
+            <a href="#" class="social-link">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="#" class="social-link">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="27728929709" class="social-link">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="#" class="social-link">
+              <i class="fab fa-instagram"></i>
             </a>
           </div>
         </div>
-      </section>
-      
-      <section id="projects" class="projects-section">
-        <div class="projects-container">
-          <h1 class="section-title">My Projects</h1>
-      
-          <div class="projects-grid">
-            <!-- Project 1 -->
-            <div class="project-card">
-              <div class="project-header">
-                <h3 class="project-name">VigilantAids</h3>
-                <span class="project-type">Full-stack Mobile App</span>
-              </div>
-              <p class="project-description">
-                Voice-assisted emergency, navigation, and reporting tool for visually impaired users.
-              </p>
-              <div class="project-highlights">
-                <ul>
-                  <li><i class="fas fa-lock"></i> Secure login using Spring Security</li>
-                  <li><i class="fas fa-server"></i> Hosted with Docker on AWS EC2</li>
-                  <li><i class="fas fa-code-branch"></i> Documented REST APIs via Swagger</li>
-                  <li><i class="fas fa-database"></i> Persistent storage with PostgreSQL</li>
-                </ul>
-              </div>
-              <div class="tech-tags">
-                <span class="tech-tag"><i class="fab fa-java"></i> Java</span>
-                <span class="tech-tag"><i class="fas fa-database"></i> Oracle PL/SQL & MySQL</span>
-                <span class="tech-tag"><i class="fab fa-docker"></i> Docker</span>
-                <span class="tech-tag"><i class="fab fa-aws"></i> AWS</span>
-              </div>
-              <div class="project-links">
-                <a href="VigilantAidApp.mp4" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                <a href="https://github.com/Potego02/vigilant-aid" class="project-link"><i class="fab fa-github"></i> Code</a>
-              </div>
-            </div>
-      
-            <!-- Project 2 -->
-            <div class="project-card">
-              <div class="project-header">
-                <h3 class="project-name">EKUHLE Farm</h3>
-                <span class="project-type">Web Application</span>
-              </div>
-              <p class="project-description">
-                A breach between farmers and supermakerts, allowing a farmer to create a profile and users to order directly from the farmer.
-              </p>
-              <div class="project-highlights">
-                <ul>
-                  <li><i class="fab fa-react"></i> React frontend styled with Material UI</li>
-                  <li><i class="fas fa-fire"></i> Auth and storage via Firebase</li>
-                  <li><i class="fas fa-calendar-alt"></i> Integrated scheduling calendar</li>
-                  <li><i class="fas fa-chart-line"></i> Visual performance tracking</li>
-                </ul>
-              </div>
-              <div class="tech-tags">
-                <span class="tech-tag"><i class="fab fa-react"></i> React</span>
-                <span class="tech-tag"><i class="fas fa-fire"></i> Firebase</span>
-                <span class="tech-tag"><i class="fab fa-node-js"></i> Node.js</span>
-                <span class="tech-tag"><i class="fas fa-paint-brush"></i> Material UI</span>
-              </div>
-              <div class="project-links">
-                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
-              </div>
-            </div>
-      
-            <!-- Project 3 -->
-            <div class="project-card">
-              <div class="project-header">
-                <h3 class="project-name">MM Mechanic</h3>
-                <span class="project-type">Web System</span>
-              </div>
-              <p class="project-description">
-                A repair booking system with mapping, payment, and real-time tracking.
-              </p>
-              <div class="project-highlights">
-                <ul>
-                  <li><i class="fab fa-java"></i> Java EE backend with MVC structure</li>
-                  <li><i class="fas fa-map-marker-alt"></i> Google Maps for location tracking</li>
-                  <li><i class="fas fa-credit-card"></i> Payment integration and booking</li>
-                  <li><i class="fas fa-database"></i> MySQL database for all services</li>
-                </ul>
-              </div>
-              <div class="tech-tags">
-                <span class="tech-tag"><i class="fab fa-java"></i> Java EE</span>
-                <span class="tech-tag"><i class="fas fa-code"></i> JSP</span>
-                <span class="tech-tag"><i class="fas fa-database"></i> MySQL</span>
-                <span class="tech-tag"><i class="fab fa-html5"></i> HTML/CSS</span>
-              </div>
-              <div class="project-links">
-                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-    
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
 
-      <section id="skills-chart" class="chart-section">
-        <div class="chart-container">
-          <h1 class="section-title">My Skills Proficiency</h1>
-      
-          <div class="skills-chart-card">
-            <!-- Chart will be rendered here by JavaScript -->
-            <canvas id="skillsChart"></canvas>
-      
-            <div class="chart-legend">
-              <div class="legend-item">
-                <span class="legend-color" style="background-color: #104c90;"></span>
-                <span>Advanced</span>
-              </div>
-              <div class="legend-item">
-                <span class="legend-color" style="background-color: #fdb516;"></span>
-                <span>Intermediate</span>
-              </div>
-              <div class="legend-item">
-                <span class="legend-color" style="background-color: #4A5568;"></span>
-                <span>Basic</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="contact-section">
-        <div class="contact-container">
-          <h1 class="section-title">Get In Touch</h1>
-      
-          <!-- Contact Form Card -->
-          <div class="contact-form-card">
-            <form class="contact-form" id="contact-form" />
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your name">
-              </div>
-      
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="your.email@example.com">
-              </div>
-      
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Your message here..."></textarea>
-              </div>
-      
-              <div class="form-submit">
-                <button type="submit" class="btn btn-primary">
-                  <i class="fas fa-paper-plane"></i> Send Message
-                </button>
-              </div>
-            </form>
-              <!-- Spinner -->
-              <div id="spinner" class="spinner"></div>
-              
-              <!-- Modal -->
-              <div id="modal" class="modal">
-                <div class="modal-content">
-                  <span id="close-modal" class="close">&times;</span>
-                  <p id="modal-message">Your message has been sent.</p>
-                  <button id="close-button" class="modal-button">Close</button>
-                </div>
-              </div>
-
+      <!-- Contact Form -->
+      <div class="contact-form-container">
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" id="name" name="name" class="form-input" placeholder="Enter your name" required>
           </div>
 
-      
-          <!-- Social Links Card (wider) -->
-          <div class="social-links-card">
-            <h3 class="social-title">Or reach me directly</h3>
-
-            <!-- Scroll hint (mobile only) -->
-            <div class="scroll-hint">
-              <i class="fas fa-arrow-right"></i>
-            </div>
-
-            <div class="social-icons">
-              <a href="https://github.com/Selogadi95" target="_blank" rel="noopener" class="social-item">
-                <i class="fab fa-github"></i>
-                <span>GitHub</span>
-              </a>
-
-              <a href="https://www.linkedin.com/in/happy-tjiane-a694b3160/" target="_blank" rel="noopener" class="social-item">
-                <i class="fab fa-linkedin"></i>
-                <span>LinkedIn</span>
-              </a>
-
-              <a href="https://wa.me/27728929709" target="_blank" rel="noopener" class="social-item">
-                <i class="fab fa-whatsapp"></i>
-                <span>WhatsApp</span>
-                <span class="contact-detail">071 8101 785</span>
-              </a>
-
-              <a href="tel:+27725569229" class="social-item">
-                <i class="fas fa-phone"></i>
-                <span>Call</span>
-                <span class="contact-detail">072 892 9709</span>
-              </a>
-
-              <a href="mailto:happy95.tjiane@gmail.com" class="social-item">
-                <i class="fas fa-envelope"></i>
-                <span>Email</span>
-                <span class="contact-detail">happy95.tjiane@gmail.com</span>
-              </a>
-            </div>
+          <div class="form-group">
+            <label for="email" class="form-label">Your Email</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email" required>
           </div>
 
-        </div>
-      </section>
+          <div class="form-group">
+            <label for="subject" class="form-label">Subject</label>
+            <input type="text" id="subject" name="subject" class="form-input" placeholder="What is this about?" required>
+          </div>
 
-  </div>
+          <div class="form-group">
+            <label for="message" class="form-label">Message</label>
+            <textarea id="message" name="message" class="form-textarea" placeholder="Type your message here..." rows="5" required></textarea>
+          </div>
 
+          <button type="submit" class="form-submit" id="submitBtn">
+            <i class="fas fa-paper-plane"></i>
+            <span>Send Message</span>
+          </button>
 
-  <!-- Footer Section -->
-  <footer class="footer">
+          <div id="formMessage" class="form-message"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
     <div class="footer-content">
-      <p>&copy; 2025 Happy Tjiane. All rights reserved.</p>
-      <p>Designed with <span class="feint-text">passion</span> and
-        <a href="#" title="Coffee">
-          <i class="fas fa-coffee coffee-icon"></i>
-        </a>
-      </p>
+
+
+      <!-- Copyright -->
+      <div class="footer-copyright">
+        <p>&copy; 2024 Happy Tjiane</p>
+        <p class="footer-sub">Software Development Graduate & Aspiring Tester</p>
+      </div>
     </div>
   </footer>
- 
- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    // Initialize EmailJS
-    (function () {
-      emailjs.init("FbSItqaB835-amN8b"); // Replace with your actual public key
-    })();
+</main>
 
-    const form = document.getElementById('contact-form');
-    const spinner = document.getElementById('spinner');
-    const modal = document.getElementById('modal');
-    const modalMessage = document.getElementById('modal-message');
-    const closeModal = document.getElementById('close-modal');
-
-    // Hide spinner initially
-    if (spinner) spinner.style.display = 'none';
-
-    if (form) {
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        // Show spinner
-        if (spinner) spinner.style.display = 'block';
-
-        emailjs.sendForm('service_wn2uzl1', 'template_u6gj86b', this)
-          .then(function () {
-            if (spinner) spinner.style.display = 'none';
-            if (modalMessage) modalMessage.textContent = "Your message was sent successfully. We'll be in touch shortly!";
-            if (modal) modal.style.display = 'flex';
-            form.reset();
-
-            // Auto-close modal after 4 seconds
-            setTimeout(() => {
-              if (modal) modal.style.display = 'none';
-            }, 4000);
-          }, function (error) {
-            if (spinner) spinner.style.display = 'none';
-            if (modalMessage) modalMessage.textContent = "Something went wrong. Please try again later.";
-            if (modal) modal.style.display = 'flex';
-
-            // Auto-close modal after 5 seconds
-            setTimeout(() => {
-              if (modal) modal.style.display = 'none';
-            }, 5000);
-
-            console.error('EmailJS error:', error);
-          });
-      });
-    }
-
-    // Close modal on close button click
-    if (closeModal) {
-      closeModal.addEventListener('click', function () {
-        if (modal) modal.style.display = 'none';
-      });
-    }
-
-    // Close modal if user clicks outside the modal content
-    window.addEventListener('click', function (e) {
-      if (modal && e.target === modal) {
-        modal.style.display = 'none';
-      }
-    });
-  });
-</script>
-
-
-
-
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const ctx = document.getElementById('skillsChart').getContext('2d');
-    
-    // Sample data - replace with your actual skills
-    const skillsData = {
-      labels: ['Java', 'Python', 'JavaScript', 'HTML/CSS', 'SQL', 'React', 'Spring Boot', 'Docker', 'AWS', 'Git'],
-      datasets: [{
-        label: 'My Skills Proficiency',
-        data: [85, 75, 80, 90, 70, 75, 80, 65, 60, 85], // Proficiency percentages
-        backgroundColor: [
-          '#104c90', '#104c90', '#104c90', // Advanced (blue)
-          '#fdb516', '#fdb516', '#fdb516', // Intermediate (gold)
-          '#4A5568', '#4A5568', '#4A5568', '#4A5568' // Basic (gray)
-        ],
-        borderColor: '#ffffff',
-        borderWidth: 2,
-        borderRadius: 5
-      }]
-    };
-    
-    new Chart(ctx, {
-      type: 'bar',
-      data: skillsData,
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        scales: {
-          y: {
-            beginAtZero: true,
-            max: 100,
-            ticks: {
-              callback: function(value) {
-                return value + '%';
-              }
-            }
-          }
-        },
-        plugins: {
-          legend: {
-            display: false
-          },
-          tooltip: {
-            callbacks: {
-              label: function(context) {
-                return context.parsed.y + '% proficiency';
-              }
-            }
-          }
-        }
-      }
-    });
-  });
-</script>
-
-  
+<!-- Add EmailJS script -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="js/app.js"></script>
 </body>
+
 </html>
