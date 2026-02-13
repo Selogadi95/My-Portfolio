@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <script src="script.js"></script>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <div class="nav-bar">
+    <div class="nav-header">
+      <div class="logo">HMT profile.</div>
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#projects">My Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+
+  <!-- Main Content Container -->
+  <div class="container">
+    
+    
+    <!-- Hero Section (Home Page) -->
+    <section id="home" class="hero-section">
+      <div class="hero-container">
+        <div class="hero">
+          <div class="hero-text">
+            <h1>Hey there, I'm Happy Tjiane</h1>
+            <p class="subheading">
+              Aspiring Software Developer and software Tester | Software Development diploma graduate
+            </p>
+             <p class="subheading">
+              <i class="fas fa-location"></i> Gauteng, South Africa 
+            </p>
+            <div class="hero-buttons">
+              <a href="#contact" class="btn btn-primary">
+                <i class="fas fa-phone"></i> let's connect
+              </a>
+              <a href="#projects" class="btn btn-outline">
+               <i class="fas fa-briefcase"></i> View my work
+
+              </a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="HappyProfile.jpg" alt="Happy Tjiane">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section (Separate Page) -->
+    <section id="about" class="about-section">
+      <div class="about-container">
+        <h1 class="about-title">About Me</h1>
+        
+        <div class="about-content">
+          <p>
+            A <strong class="highlight">A recent graduate in Information Technology, majored in Software development</strong> at
+            <strong class="highlight">Tshwane University of Technology</strong>, I thrive at the intersection of
+            <strong class="highlight">mobile</strong> and <strong class="highlight">web development</strong>.
+            My code is powered by <strong class="highlight">Java/Kotlin</strong> for Android,
+            <strong class="highlight">React.js</strong> for interactive UIs, and <strong class="highlight">SQL</strong>
+            for structured data magic. Currently obsessed with <strong class="highlight">clean architecture</strong>
+            and <strong class="highlight">scalable systems</strong>, I approach every project with
+            <strong class="highlight">performance</strong> and <strong class="highlight">user experience</strong>
+            as non-negotiable pillars.
+          </p>
+        </div>
+        <!-- Icon Container -->
+        <div class="about-icons">
+          <div class="icon-item">
+            <i class="fas fa-university"></i>
+            <span class="icon-label">TUT Comp<br>Science</span>
+          </div>
+          <div class="icon-item">
+            <i class="fas fa-laptop-code"></i>
+            <span class="icon-label">Mobile & Web<br>Development</span>
+          </div>
+          <div class="icon-item">
+            <i class="fas fa-book-open"></i>
+            <span class="icon-label">Continuous<br>Learning</span>
+          </div>
+        </div>
+
+        
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+      <h1 class="section-title">I've worked with</h1>
+      
+      <div class="skills-grid">
+        <!-- Programming Languages -->
+        <div class="skill-card">
+          <i class="fab fa-html5"></i>
+          <span>HTML5</span>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-css3-alt"></i>
+          <span>CSS3</span>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-js"></i>
+          <span>JavaScript</span>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-java"></i>
+          <span>Java</span>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-database"></i>
+          <span>SQL</span>
+        </div>
+        
+        <!-- Frameworks & Libraries -->
+        <div class="skill-card">
+          <i class="fab fa-react"></i>
+          <span>React</span>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-leaf"></i>
+          <span>Spring Boot</span>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-node-js"></i>
+          <span>Node.js</span>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-java J2EE"></i>
+          <span>J2EE</span>
+        </div>
+        
+        <!-- Tools & Platforms -->
+        <div class="skill-card">
+          <i class="fab fa-github"></i>
+          <span>GitHub</span>
+        </div>
+        
+        <div class="skill-card">
+          <i class="fas fa-fire"></i>
+          <span>Firebase</span>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-docker"></i>
+          <span>Docker</span>
+        </div>
+        
+        <!-- Databases -->
+        <div class="skill-card">
+          <i class="fas fa-database"></i>
+          <span>MySQL</span>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-database"></i>
+          <span>PostgreSQL</span>
+        </div>
+      </div>
+    </section>
+
+  
+
+    <!-- Hire Me Section -->
+          <section id="hire-me" class="hire-section">
+        <div class="hire-container">
+          <h1 class="section-title">Work With Me</h1>
+        
+          <div class="value-cards">
+            <!-- Card 1 -->
+            <div class="value-card">
+              <h3 class="card-title"> Currently Seeking</h3>
+              <ul class="card-list">
+                <li>WIL / Internship Placement</li>
+                <li>Remote / Hybrid roles</li>
+                <li>Growth-oriented teams</li>
+              </ul>
+            </div>
+        
+            <!-- Card 2 -->
+            <div class="value-card">
+              <h3 class="card-title">i Offer</h3>
+              <ul class="card-list">
+                <li>Full-stack web development</li>
+                <li>Quick adaptability</li>
+                <li>Clean, maintainable code</li>
+              </ul>
+            </div>
+        
+            <!-- Card 3 -->
+            <div class="value-card">
+              <h3 class="card-title">My Value</h3>
+              <ul class="card-list">
+                <li>Team player & communicator</li>
+                <li>Attention to detail</li>
+                <li>Driven to grow & learn</li>
+              </ul>
+            </div>
+          </div>
+        
+          <div class="hire-action-buttons">
+            <a href="#contact" class="hire-btn hire-btn-primary">
+              <i class="fas fa-paper-plane"></i> Hire Me
+            </a>
+            <a href="HAPPY.pdf" class="hire-btn hire-btn-secondary">
+              <i class="fas fa-download"></i> Download Resume
+            </a>
+          </div>
+        </div>
+      </section>
+      
+      <section id="projects" class="projects-section">
+        <div class="projects-container">
+          <h1 class="section-title">My Projects</h1>
+      
+          <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+              <div class="project-header">
+                <h3 class="project-name">VigilantAids</h3>
+                <span class="project-type">Full-stack Mobile App</span>
+              </div>
+              <p class="project-description">
+                Voice-assisted emergency, navigation, and reporting tool for visually impaired users.
+              </p>
+              <div class="project-highlights">
+                <ul>
+                  <li><i class="fas fa-lock"></i> Secure login using Spring Security</li>
+                  <li><i class="fas fa-server"></i> Hosted with Docker on AWS EC2</li>
+                  <li><i class="fas fa-code-branch"></i> Documented REST APIs via Swagger</li>
+                  <li><i class="fas fa-database"></i> Persistent storage with PostgreSQL</li>
+                </ul>
+              </div>
+              <div class="tech-tags">
+                <span class="tech-tag"><i class="fab fa-java"></i> Java</span>
+                <span class="tech-tag"><i class="fas fa-database"></i> Oracle PL/SQL & MySQL</span>
+                <span class="tech-tag"><i class="fab fa-docker"></i> Docker</span>
+                <span class="tech-tag"><i class="fab fa-aws"></i> AWS</span>
+              </div>
+              <div class="project-links">
+                <a href="VigilantAidApp.mp4" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                <a href="https://github.com/Potego02/vigilant-aid" class="project-link"><i class="fab fa-github"></i> Code</a>
+              </div>
+            </div>
+      
+            <!-- Project 2 -->
+            <div class="project-card">
+              <div class="project-header">
+                <h3 class="project-name">EKUHLE Farm</h3>
+                <span class="project-type">Web Application</span>
+              </div>
+              <p class="project-description">
+                A breach between farmers and supermakerts, allowing a farmer to create a profile and users to order directly from the farmer.
+              </p>
+              <div class="project-highlights">
+                <ul>
+                  <li><i class="fab fa-react"></i> React frontend styled with Material UI</li>
+                  <li><i class="fas fa-fire"></i> Auth and storage via Firebase</li>
+                  <li><i class="fas fa-calendar-alt"></i> Integrated scheduling calendar</li>
+                  <li><i class="fas fa-chart-line"></i> Visual performance tracking</li>
+                </ul>
+              </div>
+              <div class="tech-tags">
+                <span class="tech-tag"><i class="fab fa-react"></i> React</span>
+                <span class="tech-tag"><i class="fas fa-fire"></i> Firebase</span>
+                <span class="tech-tag"><i class="fab fa-node-js"></i> Node.js</span>
+                <span class="tech-tag"><i class="fas fa-paint-brush"></i> Material UI</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+              </div>
+            </div>
+      
+            <!-- Project 3 -->
+            <div class="project-card">
+              <div class="project-header">
+                <h3 class="project-name">MM Mechanic</h3>
+                <span class="project-type">Web System</span>
+              </div>
+              <p class="project-description">
+                A repair booking system with mapping, payment, and real-time tracking.
+              </p>
+              <div class="project-highlights">
+                <ul>
+                  <li><i class="fab fa-java"></i> Java EE backend with MVC structure</li>
+                  <li><i class="fas fa-map-marker-alt"></i> Google Maps for location tracking</li>
+                  <li><i class="fas fa-credit-card"></i> Payment integration and booking</li>
+                  <li><i class="fas fa-database"></i> MySQL database for all services</li>
+                </ul>
+              </div>
+              <div class="tech-tags">
+                <span class="tech-tag"><i class="fab fa-java"></i> Java EE</span>
+                <span class="tech-tag"><i class="fas fa-code"></i> JSP</span>
+                <span class="tech-tag"><i class="fas fa-database"></i> MySQL</span>
+                <span class="tech-tag"><i class="fab fa-html5"></i> HTML/CSS</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+    
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills-chart" class="chart-section">
+        <div class="chart-container">
+          <h1 class="section-title">My Skills Proficiency</h1>
+      
+          <div class="skills-chart-card">
+            <!-- Chart will be rendered here by JavaScript -->
+            <canvas id="skillsChart"></canvas>
+      
+            <div class="chart-legend">
+              <div class="legend-item">
+                <span class="legend-color" style="background-color: #104c90;"></span>
+                <span>Advanced</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-color" style="background-color: #fdb516;"></span>
+                <span>Intermediate</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-color" style="background-color: #4A5568;"></span>
+                <span>Basic</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section">
+        <div class="contact-container">
+          <h1 class="section-title">Get In Touch</h1>
+      
+          <!-- Contact Form Card -->
+          <div class="contact-form-card">
+            <form class="contact-form" id="contact-form" />
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name">
+              </div>
+      
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="your.email@example.com">
+              </div>
+      
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your message here..."></textarea>
+              </div>
+      
+              <div class="form-submit">
+                <button type="submit" class="btn btn-primary">
+                  <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+              </div>
+            </form>
+              <!-- Spinner -->
+              <div id="spinner" class="spinner"></div>
+              
+              <!-- Modal -->
+              <div id="modal" class="modal">
+                <div class="modal-content">
+                  <span id="close-modal" class="close">&times;</span>
+                  <p id="modal-message">Your message has been sent.</p>
+                  <button id="close-button" class="modal-button">Close</button>
+                </div>
+              </div>
+
+          </div>
+
+      
+          <!-- Social Links Card (wider) -->
+          <div class="social-links-card">
+            <h3 class="social-title">Or reach me directly</h3>
+
+            <!-- Scroll hint (mobile only) -->
+            <div class="scroll-hint">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+
+            <div class="social-icons">
+              <a href="https://github.com/Selogadi95" target="_blank" rel="noopener" class="social-item">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+              </a>
+
+              <a href="https://www.linkedin.com/in/happy-tjiane-a694b3160/" target="_blank" rel="noopener" class="social-item">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
+
+              <a href="https://wa.me/27728929709" target="_blank" rel="noopener" class="social-item">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+                <span class="contact-detail">071 8101 785</span>
+              </a>
+
+              <a href="tel:+27725569229" class="social-item">
+                <i class="fas fa-phone"></i>
+                <span>Call</span>
+                <span class="contact-detail">072 892 9709</span>
+              </a>
+
+              <a href="mailto:happy95.tjiane@gmail.com" class="social-item">
+                <i class="fas fa-envelope"></i>
+                <span>Email</span>
+                <span class="contact-detail">happy95.tjiane@gmail.com</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+  </div>
+
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Happy Tjiane. All rights reserved.</p>
+      <p>Designed with <span class="feint-text">passion</span> and
+        <a href="#" title="Coffee">
+          <i class="fas fa-coffee coffee-icon"></i>
+        </a>
+      </p>
+    </div>
+  </footer>
+ 
+ <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Initialize EmailJS
+    (function () {
+      emailjs.init("FbSItqaB835-amN8b"); // Replace with your actual public key
+    })();
+
+    const form = document.getElementById('contact-form');
+    const spinner = document.getElementById('spinner');
+    const modal = document.getElementById('modal');
+    const modalMessage = document.getElementById('modal-message');
+    const closeModal = document.getElementById('close-modal');
+
+    // Hide spinner initially
+    if (spinner) spinner.style.display = 'none';
+
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Show spinner
+        if (spinner) spinner.style.display = 'block';
+
+        emailjs.sendForm('service_wn2uzl1', 'template_u6gj86b', this)
+          .then(function () {
+            if (spinner) spinner.style.display = 'none';
+            if (modalMessage) modalMessage.textContent = "Your message was sent successfully. We'll be in touch shortly!";
+            if (modal) modal.style.display = 'flex';
+            form.reset();
+
+            // Auto-close modal after 4 seconds
+            setTimeout(() => {
+              if (modal) modal.style.display = 'none';
+            }, 4000);
+          }, function (error) {
+            if (spinner) spinner.style.display = 'none';
+            if (modalMessage) modalMessage.textContent = "Something went wrong. Please try again later.";
+            if (modal) modal.style.display = 'flex';
+
+            // Auto-close modal after 5 seconds
+            setTimeout(() => {
+              if (modal) modal.style.display = 'none';
+            }, 5000);
+
+            console.error('EmailJS error:', error);
+          });
+      });
+    }
+
+    // Close modal on close button click
+    if (closeModal) {
+      closeModal.addEventListener('click', function () {
+        if (modal) modal.style.display = 'none';
+      });
+    }
+
+    // Close modal if user clicks outside the modal content
+    window.addEventListener('click', function (e) {
+      if (modal && e.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  });
+</script>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const ctx = document.getElementById('skillsChart').getContext('2d');
+    
+    // Sample data - replace with your actual skills
+    const skillsData = {
+      labels: ['Java', 'Python', 'JavaScript', 'HTML/CSS', 'SQL', 'React', 'Spring Boot', 'Docker', 'AWS', 'Git'],
+      datasets: [{
+        label: 'My Skills Proficiency',
+        data: [85, 75, 80, 90, 70, 75, 80, 65, 60, 85], // Proficiency percentages
+        backgroundColor: [
+          '#104c90', '#104c90', '#104c90', // Advanced (blue)
+          '#fdb516', '#fdb516', '#fdb516', // Intermediate (gold)
+          '#4A5568', '#4A5568', '#4A5568', '#4A5568' // Basic (gray)
+        ],
+        borderColor: '#ffffff',
+        borderWidth: 2,
+        borderRadius: 5
+      }]
+    };
+    
+    new Chart(ctx, {
+      type: 'bar',
+      data: skillsData,
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 100,
+            ticks: {
+              callback: function(value) {
+                return value + '%';
+              }
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            display: false
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return context.parsed.y + '% proficiency';
+              }
+            }
+          }
+        }
+      }
+    });
+  });
+</script>
+
+  
+</body>
+</html>
